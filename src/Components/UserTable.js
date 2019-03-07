@@ -1,8 +1,9 @@
 import React from 'react'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const UserTable = props => (
-	<table>
+  <div class="table-responsive">
+	<table class="table">
 		<thead>
 			<tr>
       <th>Id</th>
@@ -19,9 +20,9 @@ const UserTable = props => (
 						<td>{user.name}</td>
 						<td>{user.username}</td>
 						<td>
-            <button onClick={() => props.deleteUser(user.id)}
-              className="button muted-button">
-              Delete
+							
+            <button class='btn btn-danger' onClick={(e) =>{if(window.confirm("confirme suppression"))(props.deleteUser(user.id))}}>
+             x
             </button>
 						</td>
 					</tr>
@@ -33,6 +34,7 @@ const UserTable = props => (
 			)}
 		</tbody>
 	</table>
+  </div>
 )
 
 export default UserTable

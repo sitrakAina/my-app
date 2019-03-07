@@ -11,7 +11,7 @@ const AddUserForm = props => {
 	}
 
 	return (
-		<form
+		<form class="form-group"
 			onSubmit={event => {
 				event.preventDefault()
 				if (!user.name || !user.username) return
@@ -24,7 +24,7 @@ const AddUserForm = props => {
 			<input type="text" name="name" value={user.name} onChange={handleInputChange} />
 			<label>Prenom</label>
 			<input type="text" name="username" value={user.username} onChange={handleInputChange} />
-			<button>Ajouter</button>
+			<button class ="btn btn-info">Ajouter</button>
 		</form>
 	)
 }
