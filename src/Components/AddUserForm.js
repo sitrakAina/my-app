@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './AddUserForm.css'
 
-const AddUserForm = props => {
+var AddUserForm = props => {
 	const initialFormState = { id: null, name: '', username: '' }
 	const [ user, setUser ] = useState(initialFormState)
 

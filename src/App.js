@@ -5,7 +5,7 @@ import './App.css'
 
 import AddUserForm from './Components/AddUserForm'
 
-const App = () => {
+var App = () => {
   const usersData = [
     
   ]

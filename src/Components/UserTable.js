@@ -7,10 +7,10 @@ const UserTable = props => (
 	<table class="table table-bordered">
 		<thead >
 			<tr class="bg-info">
-      <th>Id</th>
-				<th>Nom</th>
-				<th>Prenom</th>
-				<th>Actions</th>
+      <th><center>Id</center></th>
+				<th><center>Nom</center></th>
+				<th><center>Prenom</center></th>
+				<th><center>Actions</center></th>
 			</tr>
 		</thead>
 		<tbody>
