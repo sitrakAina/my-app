@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import UserTable from './Components/UserTable'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 
 import AddUserForm from './Components/AddUserForm'
 
@@ -20,7 +21,7 @@ const App = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container body">
       
       <div className="flex-row">
         <div className="flex-large">

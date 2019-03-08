@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './AddUserForm.css'
 
 const AddUserForm = props => {
 	const initialFormState = { id: null, name: '', username: '' }
@@ -11,7 +12,7 @@ const AddUserForm = props => {
 	}
 
 	return (
-		<form class="form-group"
+		<form 
 			onSubmit={event => {
 				event.preventDefault()
 				if (!user.name || !user.username) return
@@ -22,9 +23,9 @@ const AddUserForm = props => {
 		>
 			<label>Nom</label>
 			<input type="text" name="name" value={user.name} onChange={handleInputChange} />
-			<label>Prenom</label>
-			<input type="text" name="username" value={user.username} onChange={handleInputChange} />
-			<button class ="btn btn-info">Ajouter</button>
+			<label class="deplacer">Prenom</label>
+			<input  type="text" name="username" value={user.username} onChange={handleInputChange} />
+			<button class ="btn btn-info deplacer">Ajouter</button>
 		</form>
 	)
 }
