@@ -23,9 +23,9 @@ var AddUserForm = props => {
 		>
 			<label>Nom</label>
 			<input type="text" name="name" value={user.name} onChange={handleInputChange} />
-			<label class="deplacer">Prenom</label>
+			<label className="deplacer">Prenom</label>
 			<input  type="text" name="username" value={user.username} onChange={handleInputChange} />
-			<button class ="btn btn-info deplacer">Ajouter</button>
+			<button className ="btn btn-info deplacer">Ajouter</button>
 		</form>
 	)
 }

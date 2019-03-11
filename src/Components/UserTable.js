@@ -1,12 +1,14 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './UserTable.css'
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css' 
 
 const UserTable = props => (
-  <div class=".table-responsive decendre">
-	<table class="table table-bordered">
+  <div className=".table-responsive decendre">
+	<table className="table table-bordered">
 		<thead >
-			<tr class="bg-info">
+			<tr className="bg-info">
       <th><center>Id</center></th>
 				<th><center>Nom</center></th>
 				<th><center>Prenom</center></th>
@@ -21,7 +23,23 @@ const UserTable = props => (
 						<td>{user.name}</td>
 						<td>{user.username}</td>
 						<td>
-            <button class='btn btn-danger' onClick={(e) =>{if(window.confirm("confirme suppression"))(props.deleteUser(user.id))}}>
+						<button className='btn btn-danger' onClick={
+						() => {
+							confirmAlert({
+								title: '',
+								message: 'Confirme supression',
+								buttons: [
+									{
+										label: 'OUI',
+										onClick: () => props.deleteUser(user.id)
+									},
+									{
+										label: 'NON',
+										onClick: () => ''
+									}
+								]
+							})
+						}}>
              x
             </button>
 						</td>
