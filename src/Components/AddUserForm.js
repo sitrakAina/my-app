@@ -18,6 +18,7 @@ var AddUserForm = props => {
 				if (!user.name || !user.username) return
 
 				props.addUser(user)
+				props.setCount(props.count +1)
 				setUser(initialFormState)
 			}}
 		>
@@ -29,5 +30,7 @@ var AddUserForm = props => {
 		</form>
 	)
 }
+
+
 
 export default AddUserForm

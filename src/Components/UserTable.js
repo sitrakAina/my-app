@@ -47,12 +47,16 @@ const UserTable = props => (
 				))
 			) : (
 				<tr>
-					<td colSpan={3}></td>
+				
 				</tr>
 			)}
 		</tbody>
 	</table>
+	
   </div>
-)
+	)
+
+
+
 
 export default UserTable
